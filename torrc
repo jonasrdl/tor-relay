@@ -1,0 +1,19 @@
+Nickname <your-nickname>
+ORPort 9001
+
+# You can define a second ORPort, to use IPv6 as follows:
+ORPort [<ipv6-address>]:9001
+
+# If you DONT want an exit relay
+ExitPolicy reject *:*
+
+ContactInfo <your-email>
+
+# If you want to use tools like nyx, to monitor your relay
+ControlPort 9051
+
+# Bandwidth limitations, at best read it up yourself at:
+# https://manpages.debian.org/testing/tor/torrc.5.en.html#GENERAL_OPTIONS (ctrl+f for "RelayBandwidth")
+# logically depends on your hoster/server
+RelayBandwidthRate 500 Mbit
+RelayBandwidthBurst 500 MBit

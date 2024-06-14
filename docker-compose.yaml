@@ -1,0 +1,10 @@
+services:
+  tor:
+    build: .
+    container_name: tor-relay
+    volumes:
+      - ./torrc:/etc/tor/torrc
+    ports:
+      - "9001:9001"
+    restart: unless-stopped
+    network_mode: host
