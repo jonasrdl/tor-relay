@@ -17,3 +17,5 @@ ControlPort 9051
 # logically depends on your hoster/server
 RelayBandwidthRate 500 Mbit
 RelayBandwidthBurst 500 MBit
+
+DataDirectory /var/lib/tor

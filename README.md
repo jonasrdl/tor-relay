@@ -6,9 +6,19 @@ Simply clone the repo via
 git clone https://github.com/jonasrdl/tor-relay.git
 ```
 
+Create the directory on your host for the Tor data if not already done:
+```
+mkdir -p ./tor-data
+```
+
+Adjust the permissions of the tor-data directory to match the tor user UID (100):
+```
+sudo chown -R 100:100 ./tor-data
+```
+
 Then adjust the `torrc` file to your needs and run the following command to start the container:
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 If you want to monitor your relay, you can use for example the tool [nyx](https://nyx.torproject.org/).   
